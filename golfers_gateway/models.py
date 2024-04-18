@@ -30,14 +30,14 @@ class TeeTime(models.Model):
     booking_close_date = models.DateField()
 
 class Booking(models.Model):
-    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
     tee_time = models.ForeignKey(TeeTime, on_delete=models.CASCADE)
     booking_date_and_time = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=[('confirmed', 'Confirmed'), ('pending', 'Pending'), ('cancelled', 'Cancelled')])
     guests_count = models.PositiveIntegerField(default=1)
 
 class Review(models.Model):
-    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
     golf_club = models.ForeignKey(GolfClub, on_delete=models.CASCADE)
     rating = models.PositiveSmallIntegerField()
     comment = models.TextField()
@@ -48,7 +48,7 @@ class Review(models.Model):
     reviewer_email = models.EmailField()
 
 class Membership(models.Model):
-    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField()
     membership_type = models.CharField(max_length=100)

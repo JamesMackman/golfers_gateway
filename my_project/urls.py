@@ -19,6 +19,10 @@ from django.urls import path, include
 from golfers_gateway import views as index_views
 
 urlpatterns = [
-    path('', index_views.index, name='index'),
+    path('', index_views.index, name='index'),  
+    path('register/', index_views.register, name='register'),  
+    path('login/', index_views.user_login, name='login'),  
+    path('logout/', index_views.user_logout, name='logout'),  
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
