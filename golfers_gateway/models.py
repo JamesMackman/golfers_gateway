@@ -29,3 +29,9 @@ class TeeTime(models.Model):
     booking_open_date = models.DateField()  
     booking_close_date = models.DateField()
 
+class Booking(models.Model):
+    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    tee_time = models.ForeignKey(TeeTime, on_delete=models.CASCADE)
+    booking_date_and_time = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, choices=[('confirmed', 'Confirmed'), ('pending', 'Pending'), ('cancelled', 'Cancelled')])
+    guests_count = models.PositiveIntegerField(default=1)
