@@ -5,9 +5,10 @@ from .models import GolfersProfile, GolfClub
 @admin.register(GolfersProfile)
 class GolfersProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'bio', 'handicap')
+    list_filter = ('handicap',)
     search_fields = ('user__username', 'bio')
 
 @admin.register(GolfClub)
 class GolfClubAdmin(admin.ModelAdmin):
     list_display = ('name', 'location_latitude', 'location_longitude', 'rating')
-    search_fields = ('name', 'description')
+    search_fields = ('name', 'description', 'contact_information')

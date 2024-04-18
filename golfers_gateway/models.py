@@ -19,5 +19,13 @@ class GolfClub(models.Model):
     rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
     website = models.URLField(blank=True)
     email = models.EmailField(blank=True)
-    
+
+class TeeTime(models.Model):
+    golf_club = models.ForeignKey(GolfClub, on_delete=models.CASCADE)
+    date_and_time = models.DateTimeField()
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+    available_slots = models.PositiveIntegerField()
+    duration_minutes = models.PositiveIntegerField()  
+    booking_open_date = models.DateField()  
+    booking_close_date = models.DateField()
 
