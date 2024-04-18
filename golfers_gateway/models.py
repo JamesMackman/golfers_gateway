@@ -35,3 +35,14 @@ class Booking(models.Model):
     booking_date_and_time = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=[('confirmed', 'Confirmed'), ('pending', 'Pending'), ('cancelled', 'Cancelled')])
     guests_count = models.PositiveIntegerField(default=1)
+
+class Review(models.Model):
+    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    golf_club = models.ForeignKey(GolfClub, on_delete=models.CASCADE)
+    rating = models.PositiveSmallIntegerField()
+    comment = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    
+    # Fields for reviewer information
+    reviewer_name = models.CharField(max_length=100)
+    reviewer_email = models.EmailField()
