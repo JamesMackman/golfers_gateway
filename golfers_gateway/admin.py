@@ -12,3 +12,9 @@ class GolfersProfileAdmin(admin.ModelAdmin):
 class GolfClubAdmin(admin.ModelAdmin):
     list_display = ('name', 'location_latitude', 'location_longitude', 'rating')
     search_fields = ('name', 'description', 'contact_information')
+
+@admin.register(TeeTime)
+class TeeTimeAdmin(admin.ModelAdmin):
+    list_display = ('golf_club', 'date_and_time', 'price', 'available_slots')
+    list_filter = ('golf_club', 'date_and_time')
+    search_fields = ('golf_club__name',)
