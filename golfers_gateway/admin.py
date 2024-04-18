@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GolfersProfile, GolfClub, TeeTime, Booking, Review
+from .models import GolfersProfile, GolfClub, TeeTime, Booking, Review, Membership 
 
 # Register your models here.
 @admin.register(GolfersProfile)
@@ -30,3 +30,9 @@ class ReviewAdmin(admin.ModelAdmin):
     list_display = ('golfer', 'golf_club', 'rating', 'date', 'reviewer_name', 'reviewer_email')
     list_filter = ('rating',)
     search_fields = ('golfer__user__username', 'golf_club__name', 'reviewer_name', 'reviewer_email')
+
+@admin.register(Membership)
+class MembershipAdmin(admin.ModelAdmin):
+    list_display = ('golfer', 'start_date', 'end_date', 'membership_type', 'status', 'membership_number', 'benefits', 'fees', 'renewal_required', 'renewal_fee')
+    list_filter = ('status', 'membership_type', 'renewal_required')
+    search_fields = ('golfer__user__username', 'membership_number', 'benefits')

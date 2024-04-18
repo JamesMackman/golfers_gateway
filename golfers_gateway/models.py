@@ -46,3 +46,15 @@ class Review(models.Model):
     # Fields for reviewer information
     reviewer_name = models.CharField(max_length=100)
     reviewer_email = models.EmailField()
+
+class Membership(models.Model):
+    golfer = models.ForeignKey(GolferProfile, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    membership_type = models.CharField(max_length=100)
+    status = models.CharField(max_length=20, choices=[('active', 'Active'), ('expired', 'Expired')])
+    membership_number = models.CharField(max_length=20)  
+    benefits = models.TextField(blank=True)
+    fees = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+    renewal_required = models.BooleanField(default=True)
+    renewal_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0)
