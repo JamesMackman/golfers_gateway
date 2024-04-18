@@ -17,3 +17,7 @@ class GolfClub(models.Model):
     image = models.ImageField(upload_to='golf_club_images/')
     contact_information = models.CharField(max_length=200)
     rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
+    website = models.URLField(blank=True)
+    email = models.EmailField(blank=True)
+    
+
