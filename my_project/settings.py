@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("postgres://xamdfdlf:TumI8R_OzOmyu35Q4OLeuQw7ZJCg1Gks@flora.db.elephantsql.com/xamdfdlf"))
 }
 
 # Password validation
