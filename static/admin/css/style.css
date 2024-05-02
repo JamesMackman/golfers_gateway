@@ -2,9 +2,11 @@
 
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body covers the full viewport height */
@@ -19,19 +21,26 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 header h1 {
+    font-size: 36px;
     margin: 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 /* Navigation Styles */
 nav {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -45,9 +54,14 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li:last-child {
+    margin-right: 0;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -57,15 +71,120 @@ nav ul li a:hover {
 /* Main Content Styles */
 main {
     flex: 1; /* Allow main content to grow to fill remaining space */
-    padding: 20px 0;
+    padding: 40px 0;
+}
+
+.about-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section h2 {
+    color: #4CAF50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.feature-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature-section li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.how-it-works-section {
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #4CAF50, #76D7C4);
+    color: white;
+}
+
+.how-it-works-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.how-it-works-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.how-it-works-section ol {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.how-it-works-section ol li {
+    margin-bottom: 10px;
 }
 
 /* Footer Styles */
 footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-text {
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .about-section, .feature-section, .how-it-works-section {
+        padding: 30px;
+    }
 }
 
