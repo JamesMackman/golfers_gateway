@@ -9,6 +9,9 @@ class GolfersProfile(models.Model):
     handicap = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     favorite_courses = models.ManyToManyField('GolfClub', blank=True)
 
+    def __str__(self):
+        return self.user.username
+
 class GolfClub(models.Model):
     name = models.CharField(max_length=100)
     location_latitude = models.DecimalField(max_digits=9, decimal_places=6)
@@ -20,6 +23,9 @@ class GolfClub(models.Model):
     website = models.URLField(blank=True)
     email = models.EmailField(blank=True)
 
+    def __str__(self):
+        return self.name
+
 class TeeTime(models.Model):
     golf_club = models.ForeignKey(GolfClub, on_delete=models.CASCADE)
     date_and_time = models.DateTimeField()
@@ -29,12 +35,18 @@ class TeeTime(models.Model):
     booking_open_date = models.DateField()  
     booking_close_date = models.DateField()
 
+    def __str__(self):
+        return f"{self.golf_club.name} - {self.date_and_time}"
+
 class Booking(models.Model):
     golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
     tee_time = models.ForeignKey(TeeTime, on_delete=models.CASCADE)
     booking_date_and_time = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=20, choices=[('confirmed', 'Confirmed'), ('pending', 'Pending'), ('cancelled', 'Cancelled')])
     guests_count = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.golfer.user.username} - {self.tee_time}"
 
 class Review(models.Model):
     golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
@@ -47,6 +59,9 @@ class Review(models.Model):
     reviewer_name = models.CharField(max_length=100)
     reviewer_email = models.EmailField()
 
+    def __str__(self):
+        return f"{self.golfer.user.username} - {self.golf_club.name}"
+
 class Membership(models.Model):
     golfer = models.ForeignKey(GolfersProfile, on_delete=models.CASCADE)
     start_date = models.DateField()
@@ -58,3 +73,7 @@ class Membership(models.Model):
     fees = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     renewal_required = models.BooleanField(default=True)
     renewal_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0)
+
+    def __str__(self):
+        return f"{self.golfer.user.username} - {self.membership_type}"
+

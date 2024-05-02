@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import GolfersProfile, GolfClub, TeeTime, Booking, Review, Membership 
+from .models import GolfersProfile, GolfClub, TeeTime, Booking, Review, Membership
+from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
 @admin.register(GolfersProfile)
