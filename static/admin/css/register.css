@@ -20,19 +20,20 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 36px;
 }
 
 /* Main Content Styles */
 main {
     flex: 1; /* Allow main content to grow to fill remaining space */
-    padding: 20px 0;
+    padding: 40px 0;
     text-align: center; /* Center align content */
 }
 
@@ -41,7 +42,7 @@ form {
     width: 50%;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -49,8 +50,8 @@ form {
 form input[type="text"],
 form input[type="password"] {
     width: calc(100% - 22px); /* Account for padding and border */
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -59,7 +60,7 @@ form button[type="submit"] {
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 15px 20px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -73,7 +74,7 @@ form button[type="submit"]:hover {
 footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     margin-top: auto; /* Push the footer to the bottom */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -82,6 +83,7 @@ footer {
 /* Additional Styles */
 h2 {
     margin-top: 0; /* Remove default margin */
-    margin-bottom: 20px; /* Add margin at bottom */
+    margin-bottom: 40px; /* Add margin at bottom */
     align-self: center; /* Center horizontally */
+    font-size: 28px;
 }
