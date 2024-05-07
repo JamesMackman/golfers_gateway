@@ -74,75 +74,36 @@ main {
     padding: 40px 0;
 }
 
-.about-section {
+.about-section, .feature-section, .how-it-works-section {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px; /* Add some space between sections */
 }
 
-.about-section h2 {
+.about-section h2, .feature-section h2, .how-it-works-section h2 {
     color: #4CAF50;
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
+    text-align: center; /* Center align the headers */
 }
 
-.about-section p {
+.about-section p, .feature-section ul, .how-it-works-section p, .how-it-works-section ol {
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: center; /* Center align the text */
 }
 
-.feature-section {
-    background-color: #f8f9fa;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-section h2 {
-    color: #4CAF50;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.feature-section ul {
+.feature-section ul, .how-it-works-section ol {
     list-style-type: none;
     padding: 0;
 }
 
-.feature-section li {
+.feature-section li, .how-it-works-section ol li {
     font-size: 18px;
     line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.how-it-works-section {
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right, #4CAF50, #76D7C4);
-    color: white;
-}
-
-.how-it-works-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.how-it-works-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.how-it-works-section ol {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.how-it-works-section ol li {
     margin-bottom: 10px;
 }
 
@@ -187,4 +148,3 @@ footer {
         padding: 30px;
     }
 }
-

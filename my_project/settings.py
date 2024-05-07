@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jamesmackma-golfersgate-cc2zbp22xsa.ws-eu110.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-jamesmackma-golfersgate-cc2zbp22xsa.ws-eu110.gitpod.io','.herokuapp.com', '8000-jamesmackma-golfersgate-cc2zbp22xsa.ws-eu111.gitpod.io']
 
 
 
