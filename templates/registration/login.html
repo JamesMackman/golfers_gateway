@@ -8,10 +8,22 @@
     <title>User Login</title>
 </head>
 <body>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form>
+    <div class="container">
+        <h2>User Login</h2>
+        <form method="POST" class="login-form">
+            {% csrf_token %}
+            <div class="form-row">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="form-row">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <div class="submit-row">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
