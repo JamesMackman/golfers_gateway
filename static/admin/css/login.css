@@ -1,13 +1,45 @@
-/* General Styles */
+/* login.css */
+
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1; /* Allow main content to grow to fill remaining space */
+    padding: 40px 0;
 }
 
 .container {
@@ -18,7 +50,7 @@ body {
     text-align: center; /* Center align content */
     width: 90%; /* Adjust width */
     max-width: 500px; /* Increased maximum width */
-    margin: 20px; /* Adjust margin */
+    margin: 20px auto; /* Adjust margin */
 }
 
 form {
@@ -59,5 +91,3 @@ h2 {
     color: #333; /* Match text color of other elements */
     font-size: 24px; /* Adjust font size */
 }
-
-/* Additional Styles */
