@@ -1,59 +1,38 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golfers Gateway</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Golfers Gateway</h1>
-        <p>Your one-stop destination for booking tee times at the world's top golf courses!</p>
-    </header>
 
-    <nav>
+{% block title %}
+Golfers Gateway
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="about-section"> 
+        <h2>About Golfers Gateway</h2>
+        <p>Golfers Gateway is a premier platform dedicated to golf enthusiasts who seek extraordinary golfing experiences. With our extensive collection of top-rated public golf courses from around the globe, we strive to make your golfing dreams a reality.</p>
+    </section>
+
+    <section class="feature-section"> 
+        <h2>Features</h2>
         <ul>
-            <li><a href="{% url 'index' %}">Home</a></li> 
-            <li><a href="{% url 'register' %}">Register</a></li>
-            <li><a href="{% url 'login' %}">Login</a></li>
+            <li>Explore and book tee times at the world's top 100 public golf courses.</li>
+            <li>Create an account to save your favorite courses and manage your bookings.</li>
+            <li>Receive exclusive offers and discounts on golf packages.</li>
+            <li>Access detailed course information, including ratings, reviews, and course amenities.</li>
         </ul>
-    </nav>
+    </section>
 
-    <main>
-        <section class="about-section"> 
-            <h2>About Golfers Gateway</h2>
-            <p>Golfers Gateway is a premier platform dedicated to golf enthusiasts who seek extraordinary golfing experiences. With our extensive collection of top-rated public golf courses from around the globe, we strive to make your golfing dreams a reality.</p>
-        </section>
-
-        <section class="feature-section"> 
-            <h2>Features</h2>
-            <ul>
-                <li>Explore and book tee times at the world's top 100 public golf courses.</li>
-                <li>Create an account to save your favorite courses and manage your bookings.</li>
-                <li>Receive exclusive offers and discounts on golf packages.</li>
-                <li>Access detailed course information, including ratings, reviews, and course amenities.</li>
-            </ul>
-        </section>
-
-        <section class="how-it-works-section"> 
-            <h2>How It Works</h2>
-            <p>Booking your next golf adventure is easy with Golfers Gateway:</p>
-            <ol>
-                <li>Sign up for a free account or log in if you're an existing member.</li>
-                <li>Search for your desired golf course using our intuitive search feature.</li>
-                <li>Select your preferred tee time and complete the booking process.</li>
-                <li>Prepare for an unforgettable golfing experience!</li>
-            </ol>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Golfers Gateway</p>
-    </footer>
-</body>
-</html>
+    <section class="how-it-works-section"> 
+        <h2>How It Works</h2>
+        <p>Booking your next golf adventure is easy with Golfers Gateway:</p>
+        <ol>
+            <li>Sign up for a free account or log in if you're an existing member.</li>
+            <li>Search for your desired golf course using our intuitive search feature.</li>
+            <li>Select your preferred tee time and complete the booking process.</li>
+            <li>Prepare for an unforgettable golfing experience!</li>
+        </ol>
+    </section>
+</main>
+{% endblock %}
 
 

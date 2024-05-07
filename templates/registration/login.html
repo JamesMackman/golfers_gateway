@@ -1,13 +1,17 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% block title %}
+User Login
+{% endblock %}
+
+{% block head %}
+    {{ block.super }}
     <link rel="stylesheet" type="text/css" href="{% static 'admin/css/login.css' %}">
-    <title>User Login</title>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
+<main>
     <div class="container">
         <h2>User Login</h2>
         <form method="POST" class="login-form">
@@ -25,5 +29,5 @@
             </div>
         </form>
     </div>
-</body>
-</html>
+</main>
+{% endblock %}
